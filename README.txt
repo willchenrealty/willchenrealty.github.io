@@ -1,0 +1,1 @@
+Upload these files to the root of your GitHub Pages repository. Keep your image files named headshot.jpg, stigler-logo.png, equal-housing.png, and wechat-qr.png in the same folder. The CNAME file connects GitHub Pages to willchenrealty.com if your DNS is pointed to GitHub Pages.

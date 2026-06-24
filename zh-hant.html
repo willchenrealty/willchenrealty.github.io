@@ -12,11 +12,11 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="William Chen，REALTOR® 房地產經紀人與房貸專員，服務南加州，提供英文與中文服務。" />
+  <meta name="description" content="William Chen，服務南加州的 REALTOR® 房地產經紀人與 Mortgage Loan Officer 房貸專員。提供英文、繁體中文與簡體中文服務。" />
+  <link rel="canonical" href="https://willchenrealty.com/zh-hant.html" />
 
-  <title>William Chen | REALTOR® 房地產經紀人 & 房貸專員</title>
+  <title>William Chen | REALTOR® 房地產經紀人 &amp; 房貸專員</title>
   <link rel="icon" href="headshot.jpg">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -44,7 +44,7 @@
       max-width: 100%;
       border-radius: 16px;
       display: block;
-      margin: 0 auto 35px auto;
+      margin: 0 auto 32px auto;
     }
 
     h1 {
@@ -60,7 +60,7 @@
     }
 
     .statement {
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       line-height: 1.45;
     }
 
@@ -76,6 +76,31 @@
       display: block;
       font-size: 15px;
       color: #444;
+    }
+
+    .consult-button,
+    .home-search-button {
+      display: block;
+      width: 100%;
+      border-radius: 999px;
+      padding: 13px 18px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      margin: 0 auto 14px;
+      transition: opacity 0.15s ease;
+    }
+
+    .consult-button {
+      background: #111;
+      color: #fff;
+    }
+
+    .home-search-button {
+      background: transparent;
+      color: #111;
+      border: 1.5px solid #111;
+      margin-bottom: 24px;
     }
 
     .icons {
@@ -115,7 +140,9 @@
     .icon-link:hover,
     .icon-button:hover,
     .company-logo-link:hover,
-    .language a:hover {
+    .language a:hover,
+    .consult-button:hover,
+    .home-search-button:hover {
       opacity: 0.65;
     }
 
@@ -123,6 +150,7 @@
       margin: 2px 0 12px;
       font-size: 13px;
       color: #444;
+      line-height: 1.6;
     }
 
     .language a {
@@ -218,7 +246,7 @@
     }
 
     .copy-wechat,
-    .save-contact {
+    .save-contact-modal {
       display: inline-block;
       width: 100%;
       padding: 11px 16px;
@@ -233,7 +261,7 @@
       margin: 4px 0 10px;
     }
 
-    .save-contact {
+    .save-contact-modal {
       background: #333;
     }
 
@@ -245,33 +273,12 @@
 
     @media (max-width: 420px) {
       body { padding: 22px 18px; }
-
       h1 { font-size: 29px; }
-
-      .headshot {
-        width: 220px;
-        margin-bottom: 28px;
-      }
-
-      .icons {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 16px 10px;
-      }
-
-      .icon-link,
-      .icon-button {
-        width: 64px;
-      }
-
-      .icon-link i,
-      .icon-button i {
-        font-size: 24px;
-      }
-
-      .icon-link span,
-      .icon-button span {
-        font-size: 11px;
-      }
+      .headshot { width: 220px; margin-bottom: 28px; }
+      .icons { grid-template-columns: repeat(4, 1fr); gap: 16px 10px; }
+      .icon-link, .icon-button { width: 64px; }
+      .icon-link i, .icon-button i { font-size: 24px; }
+      .icon-link span, .icon-button span { font-size: 11px; }
     }
   </style>
 </head>
@@ -282,14 +289,20 @@
 
     <h1>William Chen</h1>
 
-    <div class="subtitle">
-      REALTOR® 房地產經紀人 & 房貸專員
-    </div>
+    <div class="subtitle">REALTOR® 房地產經紀人 & 房貸專員</div>
 
     <div class="statement">
       <strong>一位聯絡人，兩種專業執照，流程更順暢。</strong>
       <span>協助客戶在南加州買房、賣房與辦理房屋貸款。</span>
     </div>
+
+    <a class="consult-button" href="sms:6267757258?&body=Hi%20William%2C%20I%27d%20like%20to%20schedule%20a%20consultation." aria-label="用簡訊預約諮詢">
+      預約諮詢
+    </a>
+
+    <a class="home-search-button" href="https://www.stigler.mortgage" target="_blank" rel="noopener noreferrer">
+      <i class="fa-solid fa-magnifying-glass"></i> 搜尋南加州房源
+    </a>
 
     <section class="icons" aria-label="Contact and profile links">
       <a class="icon-link" href="tel:6267757258" aria-label="Call William Chen">
@@ -302,15 +315,20 @@
         <span>簡訊</span>
       </a>
 
-      <a class="icon-link" href="mailto:willchen.realty@gmail.com" aria-label="Email William Chen">
-        <i class="fa-solid fa-envelope"></i>
-        <span>Email</span>
+      <a class="icon-link" href="william-chen.vcf" download aria-label="Save William Chen contact">
+        <i class="fa-solid fa-address-card"></i>
+        <span>儲存聯絡人</span>
       </a>
 
       <button class="icon-button" onclick="openWeChatModal()" aria-label="WeChat">
         <i class="fa-brands fa-weixin"></i>
         <span>微信</span>
       </button>
+
+      <a class="icon-link" href="mailto:willchen.realty@gmail.com" aria-label="Email William Chen">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Email</span>
+      </a>
 
       <a class="icon-link" href="https://www.zillow.com/profile/willchenrealty" target="_blank" rel="noopener noreferrer" aria-label="Zillow">
         <i class="fa-solid fa-house"></i>
@@ -326,15 +344,10 @@
         <i class="fa-solid fa-id-card"></i>
         <span>個人頁面</span>
       </a>
-
-      <a class="icon-link" href="https://www.stigler.mortgage" target="_blank" rel="noopener noreferrer" aria-label="Search Homes">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <span>找房</span>
-      </a>
     </section>
 
     <div class="language" aria-label="Language options">
-      <a href="index.html">English</a> • 繁體中文 • <a href="zh-hans.html">简体中文</a>
+      🌐 <a href="index.html">English</a> | 繁體中文 | <a href="zh-hans.html">简体中文</a>
     </div>
 
     <a class="company-logo-link"
@@ -359,13 +372,13 @@
   <div id="wechatModal" class="wechat-modal" role="dialog" aria-modal="true" aria-labelledby="wechatTitle">
     <div class="wechat-modal-content">
       <button class="wechat-close" onclick="closeWeChatModal()" aria-label="Close WeChat popup">×</button>
-      <h2 id="wechatTitle">加入我的微信</h2>
+      <h2 id="wechatTitle">使用微信聯絡我</h2>
       <p>請使用微信掃描 QR Code 加我。</p>
       <img src="wechat-qr.png" alt="William Chen WeChat QR Code" class="wechat-qr">
       <p class="wechat-id"><strong>WeChat ID:</strong> wilma626</p>
       <button class="copy-wechat" onclick="copyWeChatId()">複製微信 ID</button>
-      <a class="save-contact" href="william-chen.vcf" download>儲存我的聯絡資訊</a>
-      <p class="wechat-note">如果您正在手機上瀏覽，請複製我的微信 ID，打開微信後搜尋加入。</p>
+      <a class="save-contact-modal" href="william-chen.vcf" download>儲存我的聯絡方式</a>
+      <p class="wechat-note">如果您正在手機上瀏覽，可先複製微信 ID，再打開微信搜尋我。</p>
     </div>
   </div>
 
@@ -380,7 +393,7 @@
 
     function copyWeChatId() {
       navigator.clipboard.writeText("wilma626").then(function() {
-        alert("微信 ID 已複製：wilma626");
+        alert("已複製微信 ID：wilma626");
       }).catch(function() {
         alert("微信 ID：wilma626");
       });
