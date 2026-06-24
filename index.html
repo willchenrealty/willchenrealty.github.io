@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>William Chen | REALTOR® & Mortgage Loan Officer</title>
+  <link rel="icon" href="headshot.jpg">
 
   <!-- Google Analytics goes here later -->
 
@@ -30,13 +31,13 @@
       text-align: center;
     }
 
-.headshot{
-    width:240px;
-    max-width:100%;
-    border-radius:16px;
-    display:block;
-    margin:0 auto 35px auto;
-}
+    .headshot {
+      width: 240px;
+      max-width: 100%;
+      border-radius: 16px;
+      display: block;
+      margin: 0 auto 35px auto;
+    }
 
     h1 {
       font-size: 32px;
@@ -47,25 +48,26 @@
     .subtitle {
       font-size: 17px;
       line-height: 1.45;
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
 
-    .company-logo-link {
-      display: inline-block;
-      margin: 4px 0 16px;
-    }
-
-    .company-logo {
-      width: 175px;
-      max-width: 80%;
-      height: auto;
-    }
-
-    .tagline {
-      font-size: 15px;
-      color: #444;
+    .statement {
       margin-bottom: 24px;
       line-height: 1.45;
+    }
+
+    .statement strong {
+      display: block;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #111;
+    }
+
+    .statement span {
+      display: block;
+      font-size: 15px;
+      color: #444;
     }
 
     .icons {
@@ -108,8 +110,25 @@
       opacity: 0.65;
     }
 
+    .language {
+      margin: 2px 0 12px;
+      font-size: 13px;
+      color: #444;
+    }
+
+    .company-logo-link {
+      display: inline-block;
+      margin: 6px 0 12px;
+    }
+
+    .company-logo {
+      width: 175px;
+      max-width: 80%;
+      height: auto;
+    }
+
     .equal-housing {
-      margin-top: 12px;
+      margin-top: 4px;
     }
 
     .equal-housing img {
@@ -179,6 +198,11 @@
     @media (max-width: 420px) {
       h1 { font-size: 29px; }
 
+      .headshot {
+        width: 220px;
+        margin-bottom: 28px;
+      }
+
       .icons {
         grid-template-columns: repeat(4, 1fr);
         gap: 16px 10px;
@@ -212,17 +236,9 @@
       REALTOR® & Mortgage Loan Officer
     </div>
 
-    <a class="company-logo-link"
-       href="https://www.stigler.mortgage/agents/2070512/William+Chen"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="William Chen Stigler Mortgage Profile">
-      <img src="stigler-logo.png" alt="Stigler Mortgage" class="company-logo">
-    </a>
-
-    <div class="tagline">
-      One Contact. Two Licenses. A Smoother Transaction.<br>
-      Serving Southern California · English · 中文
+    <div class="statement">
+      <strong>One Contact. Two Licenses. A Smoother Transaction.</strong>
+      <span>Helping clients buy, sell, and finance real estate throughout Southern California.</span>
     </div>
 
     <section class="icons">
@@ -266,6 +282,18 @@
         <span>Search</span>
       </a>
     </section>
+
+    <div class="language">
+      English • 中文
+    </div>
+
+    <a class="company-logo-link"
+       href="https://www.stigler.mortgage/agents/2070512/William+Chen"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="William Chen Stigler Mortgage Profile">
+      <img src="stigler-logo.png" alt="Stigler Mortgage" class="company-logo">
+    </a>
 
     <div class="equal-housing">
       <img src="equal-housing.png" alt="Equal Housing Opportunity">
