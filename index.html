@@ -7,6 +7,8 @@
 
 <title>William Chen | REALTOR® & Mortgage Loan Officer</title>
 
+<link rel="icon" href="headshot.jpg">
+
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -17,31 +19,30 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 }
 
 body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    margin:0;
     background:#ffffff;
     color:#222;
-    margin:0;
-    padding:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 
 .container{
-    max-width:720px;
+    max-width:700px;
     margin:auto;
-    padding:60px 25px;
+    padding:40px 25px;
     text-align:center;
 }
 
 .headshot{
-    width:260px;
+    width:240px;
     max-width:100%;
     border-radius:14px;
     display:block;
-    margin:0 auto 35px auto;
+    margin:0 auto 28px auto;
 }
 
 h1{
     margin:0;
-    font-size:4rem;
+    font-size:3.5rem;
     font-weight:700;
     line-height:1.05;
 }
@@ -49,108 +50,83 @@ h1{
 .subtitle{
     margin-top:12px;
     color:#666;
-    font-size:1rem;
+    font-size:.95rem;
     letter-spacing:1.5px;
     text-transform:uppercase;
 }
 
-.divider{
-    width:60px;
-    height:1px;
-    background:#dddddd;
-    margin:32px auto;
-}
-
 .tagline{
-    font-size:2rem;
+    margin-top:28px;
+    font-size:1.8rem;
     font-weight:600;
-    margin-bottom:18px;
 }
 
 .description{
-    max-width:520px;
-    margin:auto;
+    max-width:500px;
+    margin:18px auto 0 auto;
     color:#555;
-    line-height:1.8;
-    font-size:1.08rem;
+    line-height:1.7;
 }
 
-.button-group{
-    margin-top:42px;
+.icons{
+    margin-top:38px;
+    display:flex;
+    justify-content:center;
+    gap:28px;
+    flex-wrap:wrap;
 }
 
-.button{
-    display:block;
+.icons a{
+    color:#111;
     text-decoration:none;
-    color:#222;
-    border:1px solid #dddddd;
-    border-radius:12px;
-    padding:18px;
-    margin-bottom:12px;
-    font-size:1.05rem;
-    transition:.2s;
+    font-size:1.6rem;
 }
 
-.button:hover{
-    background:#f7f7f7;
-}
-
-.social{
-    margin-top:40px;
-    font-size:1.05rem;
-}
-
-.social a{
-    color:#444;
-    text-decoration:none;
-    margin:0 8px;
-}
-
-.social a:hover{
-    color:#000;
-}
-
-.dot{
-    color:#bbb;
+.icons a:hover{
+    opacity:.6;
 }
 
 .language{
-    margin-top:28px;
+    margin-top:30px;
     color:#666;
 }
 
 .footer{
-    margin-top:50px;
-    padding-top:30px;
-    border-top:1px solid #eeeeee;
+    margin-top:35px;
     color:#777;
-    line-height:1.9;
-    font-size:.95rem;
+    font-size:.9rem;
+    line-height:1.8;
 }
 
 .stigler-logo{
     width:220px;
     max-width:90%;
-    margin-top:25px;
+    margin-top:20px;
 }
 
 .equal{
-    margin-top:20px;
+    margin-top:18px;
+    font-size:1.3rem;
 }
 
 @media (max-width:600px){
 
+    .headshot{
+        width:210px;
+    }
+
     h1{
-        font-size:2.8rem;
+        font-size:2.7rem;
     }
 
     .tagline{
-        font-size:1.6rem;
+        font-size:1.45rem;
     }
 
-    .headshot{
-        width:220px;
+    .icons{
+        gap:22px;
     }
+
 }
 
 </style>
@@ -169,8 +145,6 @@ h1{
 REALTOR® & Mortgage Loan Officer
 </div>
 
-<div class="divider"></div>
-
 <div class="tagline">
 One Contact. Two Licenses.
 </div>
@@ -179,40 +153,30 @@ One Contact. Two Licenses.
 Helping clients buy, sell, and finance real estate throughout Southern California.
 </div>
 
-<div class="button-group">
+<div class="icons">
 
-<a class="button" href="tel:6267757258">
+<a href="tel:6267757258" title="Call / Text">
 <i class="fa-solid fa-phone"></i>
-&nbsp; Call / Text Me
 </a>
 
-<a class="button" href="mailto:willchen.realty@gmail.com">
+<a href="mailto:willchen.realty@gmail.com" title="Email">
 <i class="fa-solid fa-envelope"></i>
-&nbsp; Email Me
 </a>
 
-<a class="button" href="#">
+<a href="#" title="Search Homes">
 <i class="fa-solid fa-house"></i>
-&nbsp; Search Homes
 </a>
 
-<a class="button" href="#">
+<a href="#" title="Get Pre-Approved">
 <i class="fa-solid fa-file-signature"></i>
-&nbsp; Get Pre-Approved
 </a>
 
-</div>
-
-<div class="social">
-
-<a href="https://www.linkedin.com/in/willchenrealty/" target="_blank">
-<i class="fab fa-linkedin"></i> LinkedIn
+<a href="https://www.linkedin.com/in/willchenrealty/" target="_blank" title="LinkedIn">
+<i class="fa-brands fa-linkedin"></i>
 </a>
 
-<span class="dot">|</span>
-
-<a href="https://www.zillow.com/profile/willchenrealty" target="_blank">
-<i class="fa-solid fa-house"></i> Zillow
+<a href="https://www.zillow.com/profile/willchenrealty" target="_blank" title="Zillow">
+<i class="fa-solid fa-star"></i>
 </a>
 
 </div>
@@ -223,14 +187,17 @@ English • 中文
 
 <div class="footer">
 
-DRE #02217452<br>
-NMLS #2654983
+DRE #02217452 · NMLS #2654983
 
 <br>
 
 <img src="stigler-logo.png" alt="Stigler Mortgage" class="stigler-logo">
 
 <div class="equal">
+<i class="fa-solid fa-house"></i>
+</div>
+
+<div>
 Equal Housing Opportunity
 </div>
 
