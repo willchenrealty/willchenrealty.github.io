@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>William Chen | REALTOR® & Mortgage Loan Officer</title>
+
+  <!-- Google Analytics goes here later -->
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       min-height: 100vh;
@@ -36,7 +35,7 @@
       height: 155px;
       object-fit: cover;
       border-radius: 50%;
-      margin-bottom: 22px;
+      margin-bottom: 18px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.12);
     }
 
@@ -49,23 +48,25 @@
     .subtitle {
       font-size: 17px;
       line-height: 1.45;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
 
-    .company-link {
-      color: inherit;
-      text-decoration: none;
-      font-weight: 600;
+    .company-logo-link {
+      display: inline-block;
+      margin: 4px 0 16px;
     }
 
-    .company-link:hover {
-      text-decoration: underline;
+    .company-logo {
+      width: 175px;
+      max-width: 80%;
+      height: auto;
     }
 
     .tagline {
       font-size: 15px;
       color: #444;
       margin-bottom: 24px;
+      line-height: 1.45;
     }
 
     .icons {
@@ -103,7 +104,8 @@
     }
 
     .icon-link:hover,
-    .icon-button:hover {
+    .icon-button:hover,
+    .company-logo-link:hover {
       opacity: 0.65;
     }
 
@@ -176,9 +178,7 @@
     }
 
     @media (max-width: 420px) {
-      h1 {
-        font-size: 29px;
-      }
+      h1 { font-size: 29px; }
 
       .icons {
         grid-template-columns: repeat(4, 1fr);
@@ -205,20 +205,21 @@
 
 <body>
   <main class="card">
-    <!-- Change headshot filename below if your file has a different name -->
     <img src="headshot.jpg" alt="William Chen" class="headshot">
 
     <h1>William Chen</h1>
 
     <div class="subtitle">
-      REALTOR® & Mortgage Loan Officer<br>
-      <a class="company-link"
-         href="https://www.stigler.mortgage/agents/2070512/William+Chen"
-         target="_blank"
-         rel="noopener noreferrer">
-        Stigler Mortgage
-      </a>
+      REALTOR® & Mortgage Loan Officer
     </div>
+
+    <a class="company-logo-link"
+       href="https://www.stigler.mortgage/agents/2070512/William+Chen"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="William Chen Stigler Mortgage Profile">
+      <img src="stigler-logo.png" alt="Stigler Mortgage" class="company-logo">
+    </a>
 
     <div class="tagline">
       One Contact. Two Licenses. A Smoother Transaction.<br>
