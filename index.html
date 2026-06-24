@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -13,7 +12,6 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-
 *{
     box-sizing:border-box;
 }
@@ -28,109 +26,137 @@ body{
 .container{
     max-width:700px;
     margin:auto;
-    padding:40px 25px;
+    padding:36px 22px;
     text-align:center;
 }
 
 .headshot{
-    width:240px;
+    width:215px;
     max-width:100%;
     border-radius:14px;
     display:block;
-    margin:0 auto 28px auto;
+    margin:0 auto 24px auto;
 }
 
 h1{
     margin:0;
-    font-size:3.5rem;
+    font-size:3.2rem;
     font-weight:700;
     line-height:1.05;
 }
 
 .subtitle{
-    margin-top:12px;
+    margin-top:10px;
     color:#666;
-    font-size:.95rem;
-    letter-spacing:1.5px;
+    font-size:.9rem;
+    letter-spacing:1.4px;
     text-transform:uppercase;
 }
 
 .tagline{
-    margin-top:28px;
-    font-size:1.8rem;
+    margin-top:24px;
+    font-size:1.65rem;
     font-weight:600;
 }
 
 .description{
     max-width:500px;
-    margin:18px auto 0 auto;
+    margin:14px auto 0 auto;
     color:#555;
-    line-height:1.7;
+    line-height:1.6;
+    font-size:1rem;
 }
 
 .icons{
-    margin-top:38px;
+    margin-top:32px;
     display:flex;
     justify-content:center;
-    gap:28px;
+    gap:24px;
     flex-wrap:wrap;
 }
 
-.icons a{
-    color:#111;
+.icon-link{
+    width:72px;
     text-decoration:none;
-    font-size:1.6rem;
+    color:#111;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:7px;
+    font-size:.78rem;
 }
 
-.icons a:hover{
-    opacity:.6;
+.icon-link i{
+    font-size:1.45rem;
+}
+
+.zillow-z{
+    font-size:1.45rem;
+    font-weight:700;
+    line-height:1;
+}
+
+.icon-link:hover{
+    opacity:.65;
 }
 
 .language{
-    margin-top:30px;
+    margin-top:26px;
     color:#666;
+    font-size:.95rem;
 }
 
 .footer{
-    margin-top:35px;
+    margin-top:28px;
     color:#777;
-    font-size:.9rem;
-    line-height:1.8;
+    font-size:.85rem;
+    line-height:1.7;
 }
 
 .stigler-logo{
-    width:220px;
-    max-width:90%;
-    margin-top:20px;
+    width:190px;
+    max-width:85%;
+    margin-top:16px;
 }
 
-.equal{
-    margin-top:18px;
-    font-size:1.3rem;
+.equal-logo{
+    width:42px;
+    margin-top:14px;
 }
 
 @media (max-width:600px){
 
+    .container{
+        padding-top:28px;
+    }
+
     .headshot{
-        width:210px;
+        width:190px;
+        margin-bottom:22px;
     }
 
     h1{
-        font-size:2.7rem;
+        font-size:2.6rem;
     }
 
     .tagline{
-        font-size:1.45rem;
+        font-size:1.35rem;
+    }
+
+    .description{
+        font-size:.95rem;
     }
 
     .icons{
-        gap:22px;
+        gap:18px;
     }
 
+    .icon-link{
+        width:62px;
+        font-size:.72rem;
+    }
 }
-
 </style>
-
 </head>
 
 <body>
@@ -155,28 +181,34 @@ Helping clients buy, sell, and finance real estate throughout Southern Californi
 
 <div class="icons">
 
-<a href="tel:6267757258" title="Call / Text">
+<a class="icon-link" href="tel:6267757258" title="Call / Text">
 <i class="fa-solid fa-phone"></i>
+<span>Call</span>
 </a>
 
-<a href="mailto:willchen.realty@gmail.com" title="Email">
+<a class="icon-link" href="mailto:willchen.realty@gmail.com" title="Email">
 <i class="fa-solid fa-envelope"></i>
+<span>Email</span>
 </a>
 
-<a href="#" title="Search Homes">
+<a class="icon-link" href="#" title="Search Homes">
 <i class="fa-solid fa-house"></i>
+<span>Homes</span>
 </a>
 
-<a href="#" title="Get Pre-Approved">
+<a class="icon-link" href="#" title="Get Pre-Approved">
 <i class="fa-solid fa-file-signature"></i>
+<span>Loan</span>
 </a>
 
-<a href="https://www.linkedin.com/in/willchenrealty/" target="_blank" title="LinkedIn">
-<i class="fa-brands fa-linkedin"></i>
+<a class="icon-link" href="https://www.linkedin.com/in/willchenrealty/" target="_blank" title="LinkedIn">
+<i class="fa-brands fa-linkedin-in"></i>
+<span>LinkedIn</span>
 </a>
 
-<a href="https://www.zillow.com/profile/willchenrealty" target="_blank" title="Zillow">
-<i class="fa-solid fa-star"></i>
+<a class="icon-link" href="https://www.zillow.com/profile/willchenrealty" target="_blank" title="Zillow">
+<span class="zillow-z">Z</span>
+<span>Zillow</span>
 </a>
 
 </div>
@@ -193,13 +225,9 @@ DRE #02217452 · NMLS #2654983
 
 <img src="stigler-logo.png" alt="Stigler Mortgage" class="stigler-logo">
 
-<div class="equal">
-<i class="fa-solid fa-house"></i>
-</div>
+<br>
 
-<div>
-Equal Housing Opportunity
-</div>
+<img src="equal-housing.png" alt="Equal Housing Opportunity" class="equal-logo">
 
 </div>
 
