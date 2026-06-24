@@ -1,237 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>William Chen | REALTOR® & Mortgage Loan Officer</title>
 
-<title>William Chen | REALTOR® & Mortgage Loan Officer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<link rel="icon" href="headshot.jpg">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<style>
-*{
-    box-sizing:border-box;
-}
-
-body{
-    margin:0;
-    background:#ffffff;
-    color:#222;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-}
-
-.container{
-    max-width:700px;
-    margin:auto;
-    padding:36px 22px;
-    text-align:center;
-}
-
-.headshot{
-    width:215px;
-    max-width:100%;
-    border-radius:14px;
-    display:block;
-    margin:0 auto 24px auto;
-}
-
-h1{
-    margin:0;
-    font-size:3.2rem;
-    font-weight:700;
-    line-height:1.05;
-}
-
-.subtitle{
-    margin-top:10px;
-    color:#666;
-    font-size:.9rem;
-    letter-spacing:1.4px;
-    text-transform:uppercase;
-}
-
-.tagline{
-    margin-top:24px;
-    font-size:1.65rem;
-    font-weight:600;
-}
-
-.description{
-    max-width:500px;
-    margin:14px auto 0 auto;
-    color:#555;
-    line-height:1.6;
-    font-size:1rem;
-}
-
-.icons{
-    margin-top:32px;
-    display:flex;
-    justify-content:center;
-    gap:24px;
-    flex-wrap:wrap;
-}
-
-.icon-link{
-    width:72px;
-    text-decoration:none;
-    color:#111;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:7px;
-    font-size:.78rem;
-}
-
-.icon-link i{
-    font-size:1.45rem;
-}
-
-.zillow-z{
-    font-size:1.45rem;
-    font-weight:700;
-    line-height:1;
-}
-
-.icon-link:hover{
-    opacity:.65;
-}
-
-.language{
-    margin-top:26px;
-    color:#666;
-    font-size:.95rem;
-}
-
-.footer{
-    margin-top:28px;
-    color:#777;
-    font-size:.85rem;
-    line-height:1.7;
-}
-
-.stigler-logo{
-    width:190px;
-    max-width:85%;
-    margin-top:16px;
-}
-
-.equal-logo{
-    width:42px;
-    margin-top:14px;
-}
-
-@media (max-width:600px){
-
-    .container{
-        padding-top:28px;
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .headshot{
-        width:190px;
-        margin-bottom:22px;
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f5;
+      color: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
     }
 
-    h1{
-        font-size:2.6rem;
+    .card {
+      width: 100%;
+      max-width: 430px;
+      text-align: center;
     }
 
-    .tagline{
-        font-size:1.35rem;
+    .headshot {
+      width: 155px;
+      height: 155px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 22px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
     }
 
-    .description{
-        font-size:.95rem;
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 8px;
     }
 
-    .icons{
-        gap:18px;
+    .subtitle {
+      font-size: 17px;
+      line-height: 1.45;
+      margin-bottom: 8px;
     }
 
-    .icon-link{
-        width:62px;
-        font-size:.72rem;
+    .company-link {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 600;
     }
-}
-</style>
+
+    .company-link:hover {
+      text-decoration: underline;
+    }
+
+    .tagline {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 24px;
+    }
+
+    .icons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px 16px;
+      justify-items: center;
+      margin-bottom: 26px;
+    }
+
+    .icon-link,
+    .icon-button {
+      color: #111;
+      text-decoration: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      width: 72px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .icon-link i,
+    .icon-button i {
+      font-size: 26px;
+    }
+
+    .icon-link span,
+    .icon-button span {
+      font-size: 12px;
+      line-height: 1.2;
+    }
+
+    .icon-link:hover,
+    .icon-button:hover {
+      opacity: 0.65;
+    }
+
+    .equal-housing {
+      margin-top: 12px;
+    }
+
+    .equal-housing img {
+      width: 74px;
+      height: auto;
+      opacity: 0.9;
+    }
+
+    .footer {
+      margin-top: 12px;
+      font-size: 11px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .wechat-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .wechat-modal-content {
+      background: #fff;
+      color: #111;
+      border-radius: 18px;
+      padding: 28px;
+      max-width: 340px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    }
+
+    .wechat-close {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      border: none;
+      background: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #111;
+    }
+
+    .wechat-modal-content h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .wechat-modal-content p {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 14px;
+    }
+
+    .wechat-qr {
+      width: 220px;
+      max-width: 100%;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 420px) {
+      h1 {
+        font-size: 29px;
+      }
+
+      .icons {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px 10px;
+      }
+
+      .icon-link,
+      .icon-button {
+        width: 64px;
+      }
+
+      .icon-link i,
+      .icon-button i {
+        font-size: 24px;
+      }
+
+      .icon-link span,
+      .icon-button span {
+        font-size: 11px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <main class="card">
+    <!-- Change headshot filename below if your file has a different name -->
+    <img src="headshot.png" alt="William Chen" class="headshot">
 
-<div class="container">
+    <h1>William Chen</h1>
 
-<img src="headshot.jpg" alt="William Chen" class="headshot">
+    <div class="subtitle">
+      REALTOR® & Mortgage Loan Officer<br>
+      <a class="company-link"
+         href="https://www.stigler.mortgage/agents/2070512/William+Chen"
+         target="_blank"
+         rel="noopener noreferrer">
+        Stigler Mortgage
+      </a>
+    </div>
 
-<h1>William Chen</h1>
+    <div class="tagline">
+      One Contact. Two Licenses. A Smoother Transaction.<br>
+      Serving Southern California · English · 中文
+    </div>
 
-<div class="subtitle">
-REALTOR® & Mortgage Loan Officer
-</div>
+    <section class="icons">
+      <a class="icon-link" href="tel:6267757258" aria-label="Call William Chen">
+        <i class="fa-solid fa-phone"></i>
+        <span>Call</span>
+      </a>
 
-<div class="tagline">
-One Contact. Two Licenses.
-</div>
+      <a class="icon-link" href="sms:6267757258" aria-label="Text William Chen">
+        <i class="fa-solid fa-comment"></i>
+        <span>Text</span>
+      </a>
 
-<div class="description">
-Helping clients buy, sell, and finance real estate throughout Southern California.
-</div>
+      <a class="icon-link" href="mailto:willchen.realty@gmail.com" aria-label="Email William Chen">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Email</span>
+      </a>
 
-<div class="icons">
+      <button class="icon-button" onclick="openWeChatModal()" aria-label="WeChat">
+        <i class="fa-brands fa-weixin"></i>
+        <span>WeChat</span>
+      </button>
 
-<a class="icon-link" href="tel:6267757258" title="Call / Text">
-<i class="fa-solid fa-phone"></i>
-<span>Call</span>
-</a>
+      <a class="icon-link" href="https://www.zillow.com/profile/" target="_blank" rel="noopener noreferrer" aria-label="Zillow">
+        <i class="fa-solid fa-house"></i>
+        <span>Zillow</span>
+      </a>
 
-<a class="icon-link" href="mailto:willchen.realty@gmail.com" title="Email">
-<i class="fa-solid fa-envelope"></i>
-<span>Email</span>
-</a>
+      <a class="icon-link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin-in"></i>
+        <span>LinkedIn</span>
+      </a>
 
-<a class="icon-link" href="#" title="Search Homes">
-<i class="fa-solid fa-house"></i>
-<span>Homes</span>
-</a>
+      <a class="icon-link" href="https://www.stigler.mortgage/agents/2070512/William+Chen" target="_blank" rel="noopener noreferrer" aria-label="Profile">
+        <i class="fa-solid fa-id-card"></i>
+        <span>Profile</span>
+      </a>
 
-<a class="icon-link" href="#" title="Get Pre-Approved">
-<i class="fa-solid fa-file-signature"></i>
-<span>Loan</span>
-</a>
+      <a class="icon-link" href="https://www.stigler.mortgage" target="_blank" rel="noopener noreferrer" aria-label="Search Homes">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span>Search</span>
+      </a>
+    </section>
 
-<a class="icon-link" href="https://www.linkedin.com/in/willchenrealty/" target="_blank" title="LinkedIn">
-<i class="fa-brands fa-linkedin-in"></i>
-<span>LinkedIn</span>
-</a>
+    <div class="equal-housing">
+      <img src="equal-housing.png" alt="Equal Housing Opportunity">
+    </div>
 
-<a class="icon-link" href="https://www.zillow.com/profile/willchenrealty" target="_blank" title="Zillow">
-<span class="zillow-z">Z</span>
-<span>Zillow</span>
-</a>
+    <div class="footer">
+      DRE #02217452 · NMLS #2654983<br>
+      10390 Commerce Center Drive, Suite 270<br>
+      Rancho Cucamonga, CA 91730
+    </div>
+  </main>
 
-</div>
+  <div id="wechatModal" class="wechat-modal">
+    <div class="wechat-modal-content">
+      <button class="wechat-close" onclick="closeWeChatModal()">×</button>
+      <h2>Connect on WeChat</h2>
+      <p>Scan this QR code with WeChat to add me.</p>
+      <img src="wechat-qr.png" alt="William Chen WeChat QR Code" class="wechat-qr">
+    </div>
+  </div>
 
-<div class="language">
-English • 中文
-</div>
+  <script>
+    function openWeChatModal() {
+      document.getElementById("wechatModal").style.display = "flex";
+    }
 
-<div class="footer">
+    function closeWeChatModal() {
+      document.getElementById("wechatModal").style.display = "none";
+    }
 
-DRE #02217452 · NMLS #2654983
-
-<br>
-
-<img src="stigler-logo.png" alt="Stigler Mortgage" class="stigler-logo">
-
-<br>
-
-<img src="equal-housing.png" alt="Equal Housing Opportunity" class="equal-logo">
-
-</div>
-
-</div>
-
+    window.onclick = function(event) {
+      const modal = document.getElementById("wechatModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
 </body>
 </html>
