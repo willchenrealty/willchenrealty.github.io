@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="William Chen open house gallery for Southern California homes.">
+  <title>Open House Gallery | William Chen</title>
+  <link rel="icon" href="headshot.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f5;
+      color: #111;
+      padding: 40px 20px;
+    }
+    .wrap { max-width: 860px; margin: 0 auto; }
+    .back {
+      display: inline-block;
+      margin-bottom: 28px;
+      color: #111;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    h1 { font-size: 34px; margin-bottom: 10px; }
+    .intro { color: #444; line-height: 1.6; margin-bottom: 30px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 16px;
+      padding: 22px;
+    }
+    .card.current { border: 2px solid #111; }
+    .badge {
+      display: inline-block;
+      background: #111;
+      color: #fff;
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .card h2 { font-size: 20px; margin-bottom: 8px; }
+    .card p { color: #555; line-height: 1.5; margin-bottom: 16px; }
+    .button {
+      display: inline-block;
+      color: #fff;
+      background: #111;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 10px 15px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .empty { color: #777; font-style: italic; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+    <h1>Open House Gallery</h1>
+    <p class="intro">
+      View the current open house and selected homes William Chen has hosted throughout Southern California.
+    </p>
+
+    <section class="grid">
+      <article class="card current">
+        <span class="badge">CURRENT OPEN HOUSE</span>
+        <h2>Current Featured Property</h2>
+        <p>View the latest flyer for the open house currently being hosted.</p>
+        <a class="button" href="open-house.pdf" target="_blank" rel="noopener noreferrer">View Flyer</a>
+      </article>
+
+      <article class="card">
+        <h2>Past Open Houses</h2>
+        <p class="empty">Past properties will appear here as the gallery grows.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
