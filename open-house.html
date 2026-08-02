@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Current and past open houses hosted by William Chen in Southern California.">
+  <title>Open Houses | William Chen</title>
+  <link rel="icon" href="headshot.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, Helvetica, sans-serif; background:#f7f7f5; color:#111; padding:38px 20px 60px; }
+    .wrap { max-width:880px; margin:0 auto; }
+    .back { display:inline-block; margin-bottom:28px; color:#111; text-decoration:none; font-weight:700; }
+    header { text-align:center; margin-bottom:30px; }
+    h1 { font-size:36px; margin-bottom:10px; }
+    header p, .archive p { color:#555; line-height:1.55; }
+    .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-bottom:44px; }
+    .card { background:#fff; border:1px solid #d8d8d4; border-radius:18px; padding:24px; }
+    .card.today { border:2px solid #111; box-shadow:0 12px 30px rgba(0,0,0,.08); }
+    .status { display:inline-block; border-radius:999px; background:#ecece8; padding:6px 10px; font-size:11px; font-weight:800; margin-bottom:15px; }
+    .card.today .status { background:#111; color:#fff; }
+    .date { color:#555; font-size:14px; font-weight:700; margin-bottom:8px; }
+    .card h2 { font-size:23px; line-height:1.25; margin-bottom:8px; }
+    .time { font-size:16px; font-weight:700; margin-bottom:15px; }
+    .details { color:#555; font-size:14px; line-height:1.55; margin-bottom:19px; }
+    .buttons { display:flex; flex-wrap:wrap; gap:10px; }
+    .button { display:inline-block; border-radius:999px; padding:11px 16px; text-decoration:none; font-size:13px; font-weight:800; border:1.5px solid #111; color:#111; }
+    .button.primary { background:#111; color:#fff; }
+    .archive { border-top:1px solid #ccc; padding-top:34px; }
+    .archive h2 { font-size:28px; margin-bottom:8px; }
+    .archive-list { display:grid; gap:12px; margin-top:20px; }
+    .archive-item { background:#fff; border:1px solid #ddd; border-radius:14px; padding:17px 18px; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+    .archive-item strong { display:block; margin-bottom:5px; }
+    .archive-item span { color:#666; font-size:13px; }
+    .language { text-align:center; margin-top:36px; font-size:13px; color:#555; }
+    .language a { color:#111; text-decoration:none; font-weight:700; }
+    @media (max-width:680px) {
+      body { padding:26px 16px 45px; }
+      h1 { font-size:31px; }
+      .grid { grid-template-columns:1fr; }
+      .archive-item { align-items:flex-start; flex-direction:column; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to William Chen</a>
+
+    <header>
+      <h1>Open Houses</h1>
+      <p>View this weekend's properties and revisit homes from previous open houses.</p>
+    </header>
+
+    <section class="grid">
+      <article class="card" data-event-date="2026-08-01">
+        <span class="status">PAST OPEN HOUSE</span>
+        <div class="date">Saturday, August 1, 2026</div>
+        <h2>15974 Parkhouse Drive Unit 3, Fontana</h2>
+        <div class="time">1:00 PM–4:00 PM</div>
+        <p class="details">Offered at $529,000 • 4 bedrooms • 3 bathrooms • approximately 1,611 sq. ft.</p>
+        <div class="buttons">
+          <a class="button primary" href="2026-0801-fontana.pdf" target="_blank" rel="noopener noreferrer">View Flyer</a>
+          <a class="button" href="sms:6267757258?&body=Hi%20William%2C%20I%20have%20a%20question%20about%2015974%20Parkhouse%20Drive%20Unit%203%20in%20Fontana.">Ask William</a>
+        </div>
+      </article>
+
+      <article class="card" data-event-date="2026-08-02">
+        <span class="status">UPCOMING OPEN HOUSE</span>
+        <div class="date">Sunday, August 2, 2026</div>
+        <h2>5094 N Crescent Street, San Bernardino</h2>
+        <div class="time">12:00 PM–4:00 PM</div>
+        <p class="details">Offered at $629,999 • 4 bedrooms • 2.5 bathrooms • approximately 2,191 sq. ft.</p>
+        <div class="buttons">
+          <a class="button primary" href="2026-0802-san-bernardino.pdf" target="_blank" rel="noopener noreferrer">View Flyer</a>
+          <a class="button" href="sms:6267757258?&body=Hi%20William%2C%20I%20have%20a%20question%20about%205094%20N%20Crescent%20Street%20in%20San%20Bernardino.">Ask William</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="archive" id="archive">
+      <h2>Open House Archive</h2>
+      <p>Previous open houses remain here so visitors can return to the correct property later.</p>
+
+      <div class="archive-list">
+        <div class="archive-item">
+          <div>
+            <strong>15974 Parkhouse Drive Unit 3, Fontana</strong>
+            <span>Saturday, August 1, 2026 • 1:00 PM–4:00 PM</span>
+          </div>
+          <a class="button" href="2026-0801-fontana.pdf" target="_blank" rel="noopener noreferrer">View Flyer</a>
+        </div>
+
+        <div class="archive-item">
+          <div>
+            <strong>5094 N Crescent Street, San Bernardino</strong>
+            <span>Sunday, August 2, 2026 • 12:00 PM–4:00 PM</span>
+          </div>
+          <a class="button" href="2026-0802-san-bernardino.pdf" target="_blank" rel="noopener noreferrer">View Flyer</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="language">
+      🌐 <a href="index.html">English Home</a> |
+      <a href="es.html">Español</a> |
+      <a href="zh-hant.html">繁體中文</a> |
+      <a href="zh-hans.html">简体中文</a>
+    </div>
+  </main>
+
+  <script>
+    const now = new Date();
+    const today = now.getFullYear() + "-" +
+      String(now.getMonth() + 1).padStart(2, "0") + "-" +
+      String(now.getDate()).padStart(2, "0");
+
+    document.querySelectorAll("[data-event-date]").forEach(function(card) {
+      const eventDate = card.getAttribute("data-event-date");
+      const status = card.querySelector(".status");
+
+      if (eventDate === today) {
+        card.classList.add("today");
+        status.textContent = "OPEN TODAY";
+      } else if (eventDate > today) {
+        status.textContent = "UPCOMING OPEN HOUSE";
+      } else {
+        status.textContent = "PAST OPEN HOUSE";
+      }
+    });
+  </script>
+</body>
+</html>
