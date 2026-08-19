@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5X5Q7XW9ET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5X5Q7XW9ET');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Upcoming, current, and past open houses hosted by William Chen throughout Southern California.">
+  <link rel="canonical" href="https://willchenrealty.com/open-house.html">
+
+  <title>Open Houses | William Chen</title>
+  <link rel="icon" href="headshot.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f5;
+      color: #111;
+      padding: 38px 20px 60px;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 28px;
+      color: #111;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .page-header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .page-header p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .section-title {
+      font-size: 25px;
+      margin: 0 0 16px;
+    }
+
+    .featured-section {
+      margin-bottom: 44px;
+    }
+
+    .event-card {
+      background: #fff;
+      border: 1px solid #d8d8d4;
+      border-radius: 18px;
+      padding: 26px;
+    }
+
+    .event-card.today {
+      border: 2px solid #111;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .status {
+      display: inline-block;
+      border-radius: 999px;
+      background: #ecece8;
+      color: #111;
+      padding: 6px 10px;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 15px;
+      letter-spacing: 0.4px;
+    }
+
+    .event-card.today .status {
+      background: #111;
+      color: #fff;
+    }
+
+    .event-date {
+      font-size: 14px;
+      color: #555;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .event-card h2 {
+      font-size: 27px;
+      line-height: 1.25;
+      margin-bottom: 9px;
+    }
+
+    .event-time {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .property-details {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      max-width: 720px;
+    }
+
+    .schedule {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin: 0 0 20px;
+    }
+
+    .schedule-item {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 13px 14px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .schedule-item strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 11px 16px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
+      border: 1.5px solid #111;
+      color: #111;
+      background: transparent;
+    }
+
+    .button.primary {
+      background: #111;
+      color: #fff;
+    }
+
+    .button:hover,
+    .back-link:hover {
+      opacity: 0.65;
+    }
+
+    .archive {
+      border-top: 1px solid #ccc;
+      padding-top: 34px;
+    }
+
+    .archive h2 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .archive-intro {
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .archive-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .archive-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 14px;
+      padding: 17px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .archive-item strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .archive-item span {
+      color: #666;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .language {
+      text-align: center;
+      margin-top: 36px;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .language a {
+      color: #111;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 680px) {
+      body { padding: 26px 16px 45px; }
+      .page-header h1 { font-size: 31px; }
+      .event-card h2 { font-size: 23px; }
+      .schedule { grid-template-columns: 1fr; }
+      .archive-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <a class="back-link" href="index.html">
+      <i class="fa-solid fa-arrow-left"></i> Back to William Chen
+    </a>
+
+    <header class="page-header">
+      <h1>Open Houses</h1>
+      <p>View the next open house and revisit homes from previous events.</p>
+    </header>
+
+    <section class="featured-section" id="featuredSection">
+      <h2 class="section-title" id="featuredHeading">Upcoming Open House</h2>
+
+      <article class="event-card" id="hazeltineEvent" data-start-date="2026-08-08" data-end-date="2026-08-09">
+        <span class="status" id="hazeltineStatus">UPCOMING OPEN HOUSE</span>
+        <div class="event-date">Saturday–Sunday, August 22–23, 2026</div>
+        <h2>1529 E Hazeltine Street, Ontario</h2>
+        <div class="event-time">1:00 PM–4:00 PM Both Days</div>
+
+        <div class="schedule">
+          <div class="schedule-item">
+            <strong>Saturday, August 22</strong>
+            1:00 PM–4:00 PM
+          </div>
+          <div class="schedule-item">
+            <strong>Sunday, August 23</strong>
+            1:00 PM–4:00 PM
+          </div>
+        </div>
+
+        <p class="property-details">
+          Offered at $849,990 • 3 bedrooms • 2 bathrooms • approximately 1,948 sq. ft. Move-in-ready Ontario home with a low tax rate, no HOA, RV parking, a private pool, remodeled kitchen, fresh interior and exterior paint, luxury vinyl plank flooring, dual-pane windows, and modern finishes throughout.
+        </p>
+
+        <div class="buttons">
+          <a class="button primary" href="2026-0822-1529-e-hazeltine-street-ontario.pdf" target="_blank" rel="noopener noreferrer">
+            View Flyer
+          </a>
+          <a class="button" href="sms:6267757258?&body=Hi%20William%2C%20I%20have%20a%20question%20about%201529%20E%20Hazeltine%20Street%20in%20Ontario.">
+            Ask William
+          </a>
+          <a class="button" href="https://williamchen.stigler.mortgage/" target="_blank" rel="noopener noreferrer">
+            Search Homes
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section class="archive" id="archive">
+      <h2>Open House Archive</h2>
+      <p class="archive-intro">
+        Previous open houses remain available so visitors can return to the correct property later.
+      </p>
+
+      <div class="archive-list" id="archiveList">
+        <div class="archive-item" id="hazeltineArchiveItem">
+          <div>
+            <strong>1529 E Hazeltine Street, Ontario</strong>
+            <span>August 22–23, 2026 • 1:00 PM–4:00 PM both days</span>
+          </div>
+          <a class="button" href="2026-0822-1529-e-hazeltine-street-ontario.pdf" target="_blank" rel="noopener noreferrer">View Flyer</a>
+        </div>
+
+        <div class="archive-item">
+          <div>
+            <strong>14551 Sleepy Creek Drive, Eastvale</strong>
+            <span>August 15–16, 2026 • 12:00 PM–4:00 PM both days</span>
+          </div>
+          <a class="button" href="2026-0815-14551-sleepy-creek-eastvale.pdf" target="_blank" rel="noopener noreferrer">View Flyer</a>
+        </div>
+
+        <div class="archive-item">
+          <div>
+            <strong>3142 Stallion Street, Ontario</strong>
+            <span>August 8–9, 2026 • 12:00 PM–4:00 PM both days</span>
+          </div>
+          <a class="button" href="2026-0808-3142-stallion-ontario.pdf" target="_blank" rel="noopener noreferrer">View Flyer</a>
+        </div>
+
+        <div class="archive-item">
+          <div>
+            <strong>5094 N Crescent Street, San Bernardino</strong>
+            <span>Sunday, August 2, 2026 • 12:00 PM–4:00 PM</span>
+          </div>
+          <a class="button" href="2026-0802-san-bernardino.pdf" target="_blank" rel="noopener noreferrer">View Flyer</a>
+        </div>
+
+        <div class="archive-item">
+          <div>
+            <strong>15974 Parkhouse Drive Unit 3, Fontana</strong>
+            <span>Saturday, August 1, 2026 • 1:00 PM–4:00 PM</span>
+          </div>
+          <a class="button" href="2026-0801-fontana.pdf" target="_blank" rel="noopener noreferrer">View Flyer</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="language">
+      🌐 <a href="index.html">English Home</a> |
+      <a href="es.html">Español</a> |
+      <a href="zh-hant.html">繁體中文</a> |
+      <a href="zh-hans.html">简体中文</a>
+    </div>
+  </main>
+
+  <script>
+    function localDateKey(date) {
+      return date.getFullYear() + "-" +
+        String(date.getMonth() + 1).padStart(2, "0") + "-" +
+        String(date.getDate()).padStart(2, "0");
+    }
+
+    function updateOpenHousePage() {
+      const today = localDateKey(new Date());
+      const startDate = "2026-08-22";
+      const endDate = "2026-08-23";
+
+      const eventCard = document.getElementById("hazeltineEvent");
+      const status = document.getElementById("hazeltineStatus");
+      const heading = document.getElementById("featuredHeading");
+      const featuredSection = document.getElementById("featuredSection");
+      const archiveItem = document.getElementById("hazeltineArchiveItem");
+
+      if (today < startDate) {
+        heading.textContent = "Upcoming Open House";
+        status.textContent = "UPCOMING OPEN HOUSE";
+        archiveItem.classList.add("hidden");
+      } else if (today >= startDate && today <= endDate) {
+        heading.textContent = "Today's Open House";
+        status.textContent = "OPEN TODAY";
+        eventCard.classList.add("today");
+        archiveItem.classList.add("hidden");
+      } else {
+        featuredSection.classList.add("hidden");
+        archiveItem.classList.remove("hidden");
+      }
+    }
+
+    updateOpenHousePage();
+  </script>
+</body>
+</html>
