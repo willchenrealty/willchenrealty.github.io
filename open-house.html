@@ -262,32 +262,32 @@
     <section class="featured-section" id="featuredSection">
       <h2 class="section-title" id="featuredHeading">Upcoming Open House</h2>
 
-      <article class="event-card" id="winrowEvent" data-start-date="2026-08-29" data-end-date="2026-08-30">
-        <span class="status" id="winrowStatus">UPCOMING OPEN HOUSE</span>
-        <div class="event-date">Saturday-Sunday, August 29-30, 2026</div>
-        <h2>2600 Winrow Court, Rowland Heights</h2>
+      <article class="event-card" id="cameronEvent" data-start-date="2026-09-05" data-end-date="2026-09-06">
+        <span class="status" id="cameronStatus">UPCOMING OPEN HOUSE</span>
+        <div class="event-date">Saturday-Sunday, September 5-6, 2026</div>
+        <h2>820 E Cameron Avenue, West Covina</h2>
         <div class="event-time">12:00 PM-4:00 PM Both Days</div>
 
         <div class="schedule">
           <div class="schedule-item">
-            <strong>Saturday, August 29</strong>
+            <strong>Saturday, September 5</strong>
             12:00 PM-4:00 PM
           </div>
           <div class="schedule-item">
-            <strong>Sunday, August 30</strong>
+            <strong>Sunday, September 6</strong>
             12:00 PM-4:00 PM
           </div>
         </div>
 
         <p class="property-details">
-          Offered at $1,175,000 • 4 bedrooms • 2 bathrooms • approximately 2,253 sq. ft. Beautifully remodeled single-story Rowland Heights home on an approximately 10,534 sq. ft. lot, featuring soaring ceilings, marble and wood flooring, a brand-new kitchen with high-end appliances, a versatile game room or office, renovated bathrooms, a 3-car attached garage, and a large fenced backyard.
+          Offered at $1,488,000 • 6 bedrooms • 3 bathrooms total • approximately 2,571 sq. ft. Beautifully renovated West Covina property featuring a 4-bedroom, 2-bath main residence plus a newly constructed detached 2-bedroom, 1-bath ADU completed in 2026. Highlights include an updated kitchen with center island and high-end appliances, renovated bathrooms, new flooring and paint, central A/C, and a 735 sq. ft. ADU with its own kitchen and washer/dryer hookup.
         </p>
 
         <div class="buttons">
-          <a class="button primary" href="2026-0829-2600-winrow-court-rowland-heights.pdf" target="_blank" rel="noopener noreferrer">
+          <a class="button primary" href="2026-0905-820-e-cameron-avenue-west-covina.pdf" target="_blank" rel="noopener noreferrer">
             View Flyer
           </a>
-          <a class="button" href="sms:6267757258?&body=Hi%20William%2C%20I%20have%20a%20question%20about%202600%20Winrow%20Court%20in%20Rowland%20Heights.">
+          <a class="button" href="sms:6267757258">
             Ask William
           </a>
           <a class="button" href="https://williamchen.stigler.mortgage/" target="_blank" rel="noopener noreferrer">
@@ -304,7 +304,15 @@
       </p>
 
       <div class="archive-list" id="archiveList">
-        <div class="archive-item" id="winrowArchiveItem">
+        <div class="archive-item" id="cameronArchiveItem">
+          <div>
+            <strong>820 E Cameron Avenue, West Covina</strong>
+            <span>September 5-6, 2026 • 12:00 PM-4:00 PM both days</span>
+          </div>
+          <a class="button" href="2026-0905-820-e-cameron-avenue-west-covina.pdf" target="_blank" rel="noopener noreferrer">View Flyer</a>
+        </div>
+
+        <div class="archive-item">
           <div>
             <strong>2600 Winrow Court, Rowland Heights</strong>
             <span>August 29-30, 2026 • 12:00 PM-4:00 PM both days</span>
@@ -371,14 +379,14 @@
 
     function updateOpenHousePage() {
       const today = localDateKey(new Date());
-      const startDate = "2026-08-29";
-      const endDate = "2026-08-30";
+      const startDate = "2026-09-05";
+      const endDate = "2026-09-06";
 
-      const eventCard = document.getElementById("winrowEvent");
-      const status = document.getElementById("winrowStatus");
+      const eventCard = document.getElementById("cameronEvent");
+      const status = document.getElementById("cameronStatus");
       const heading = document.getElementById("featuredHeading");
       const featuredSection = document.getElementById("featuredSection");
-      const archiveItem = document.getElementById("winrowArchiveItem");
+      const archiveItem = document.getElementById("cameronArchiveItem");
 
       if (today < startDate) {
         heading.textContent = "Upcoming Open House";
