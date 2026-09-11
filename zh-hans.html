@@ -333,7 +333,7 @@
 </head>
 
 <body>
-  <a class="open-house-bar" href="open-house.html">
+  <a class="open-house-bar" id="openHouseBar" href="open-house.html">
     <i class="fa-solid fa-house-chimney"></i> 本周末开放看房
   </a>
 
@@ -390,12 +390,7 @@
         <span>Zillow</span>
       </a>
 
-      <a class="icon-link" href="https://www.linkedin.com/in/willchenrealty/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <i class="fa-brands fa-linkedin-in"></i>
-        <span>LinkedIn</span>
-      </a>
-
-      <a class="icon-link" href="https://www.stigler.mortgage/agents/2070512/William+Chen" target="_blank" rel="noopener noreferrer" aria-label="William Chen Profile">
+      <a class="icon-link" href="https://williamchen.stigler.mortgage/" target="_blank" rel="noopener noreferrer" aria-label="William Chen Profile">
         <i class="fa-solid fa-id-card"></i>
         <span>个人页面</span>
       </a>
@@ -406,7 +401,7 @@
     </div>
 
     <a class="company-logo-link"
-       href="https://www.stigler.mortgage/agents/2070512/William+Chen"
+       href="https://williamchen.stigler.mortgage/"
        target="_blank"
        rel="noopener noreferrer"
        aria-label="William Chen Stigler Mortgage Profile">
@@ -466,6 +461,26 @@
         closeWeChatModal();
       }
     });
-</script>
+    function updateOpenHouseBar() {
+      const bar = document.getElementById("openHouseBar");
+      if (!bar) return;
+
+      const now = new Date();
+      const y = now.getFullYear();
+      const m = now.getMonth() + 1;
+      const d = now.getDate();
+
+      if (y === 2026 && m === 8 && d === 1) {
+        bar.innerHTML = '<i class="fa-solid fa-house-chimney"></i> Today\'s Open House • Fontana • 1–4 PM';
+      } else if (y === 2026 && m === 8 && d === 2) {
+        bar.innerHTML = '<i class="fa-solid fa-house-chimney"></i> Today\'s Open House • San Bernardino • 12–4 PM';
+      } else {
+        bar.innerHTML = '<i class="fa-solid fa-house-chimney"></i> View 开放看房档案';
+        bar.href = "open-house.html#archive";
+      }
+    }
+
+    updateOpenHouseBar();
+  </script>
 </body>
 </html>

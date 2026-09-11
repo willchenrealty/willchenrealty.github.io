@@ -375,11 +375,6 @@
         <span>Save Contact</span>
       </a>
 
-      <button class="icon-button" onclick="openWeChatModal()" aria-label="WeChat">
-        <i class="fa-brands fa-weixin"></i>
-        <span>WeChat</span>
-      </button>
-
       <a class="icon-link" href="mailto:willchen.realty@gmail.com" aria-label="Email William Chen">
         <i class="fa-solid fa-envelope"></i>
         <span>Email</span>
@@ -390,12 +385,7 @@
         <span>Zillow</span>
       </a>
 
-      <a class="icon-link" href="https://www.linkedin.com/in/willchenrealty/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-        <i class="fa-brands fa-linkedin-in"></i>
-        <span>LinkedIn</span>
-      </a>
-
-      <a class="icon-link" href="https://www.stigler.mortgage/agents/2070512/William+Chen" target="_blank" rel="noopener noreferrer" aria-label="William Chen Profile">
+      <a class="icon-link" href="https://williamchen.stigler.mortgage/" target="_blank" rel="noopener noreferrer" aria-label="William Chen Profile">
         <i class="fa-solid fa-id-card"></i>
         <span>Profile</span>
       </a>
@@ -406,7 +396,7 @@
     </div>
 
     <a class="company-logo-link"
-       href="https://www.stigler.mortgage/agents/2070512/William+Chen"
+       href="https://williamchen.stigler.mortgage/"
        target="_blank"
        rel="noopener noreferrer"
        aria-label="William Chen Stigler Mortgage Profile">
@@ -423,49 +413,5 @@
       Rancho Cucamonga, CA 91730
     </div>
   </main>
-
-  <div id="wechatModal" class="wechat-modal" role="dialog" aria-modal="true" aria-labelledby="wechatTitle">
-    <div class="wechat-modal-content">
-      <button class="wechat-close" onclick="closeWeChatModal()" aria-label="Close WeChat popup">×</button>
-      <h2 id="wechatTitle">Connect on WeChat</h2>
-      <p>Scan this QR code with WeChat to add me.</p>
-      <img src="wechat-qr.png" alt="William Chen WeChat QR Code" class="wechat-qr">
-      <p class="wechat-id"><strong>WeChat ID:</strong> wilma626</p>
-      <button class="copy-wechat" onclick="copyWeChatId()">Copy WeChat ID</button>
-      <a class="save-contact-modal" href="william-chen.vcf" download>Save My Contact</a>
-      <p class="wechat-note">On mobile? Copy my WeChat ID, then open WeChat and search for me.</p>
-    </div>
-  </div>
-
-  <script>
-    function openWeChatModal() {
-      document.getElementById("wechatModal").style.display = "flex";
-    }
-
-    function closeWeChatModal() {
-      document.getElementById("wechatModal").style.display = "none";
-    }
-
-    function copyWeChatId() {
-      navigator.clipboard.writeText("wilma626").then(function() {
-        alert("WeChat ID copied: wilma626");
-      }).catch(function() {
-        alert("WeChat ID: wilma626");
-      });
-    }
-
-    window.onclick = function(event) {
-      const modal = document.getElementById("wechatModal");
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    };
-
-    document.addEventListener("keydown", function(event) {
-      if (event.key === "Escape") {
-        closeWeChatModal();
-      }
-    });
-</script>
 </body>
 </html>
