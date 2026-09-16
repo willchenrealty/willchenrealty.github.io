@@ -333,8 +333,8 @@
 </head>
 
 <body>
-  <a class="open-house-bar" id="openHouseBar" href="open-house.html">
-    <i class="fa-solid fa-house-chimney"></i> 本週末開放看屋
+  <a class="open-house-bar" id="openHouseBar" href="open-house.pdf" target="_blank" rel="noopener noreferrer">
+    <i class="fa-solid fa-house-chimney"></i> 本週末開放看屋 • Diamond Bar • 周六 & 周日 11 AM–4 PM
   </a>
 
   <main class="card">
@@ -355,7 +355,7 @@
     </a>
 
     <div class="open-house-links">
-      <a href="open-house.html">本週末開放看屋</a>
+      <a href="open-house.pdf" target="_blank" rel="noopener noreferrer">查看本週末開放看屋傳單</a>
       <a href="open-house.html#archive">開放看屋檔案</a>
     </div>
 
@@ -377,7 +377,7 @@
 
       <button class="icon-button" onclick="openWeChatModal()" aria-label="WeChat">
         <i class="fa-brands fa-weixin"></i>
-        <span>WeChat</span>
+        <span>加我微信</span>
       </button>
 
       <a class="icon-link" href="mailto:willchen.realty@gmail.com" aria-label="Email William Chen">
@@ -422,7 +422,7 @@
   <div id="wechatModal" class="wechat-modal" role="dialog" aria-modal="true" aria-labelledby="wechatTitle">
     <div class="wechat-modal-content">
       <button class="wechat-close" onclick="closeWeChatModal()" aria-label="Close WeChat popup">×</button>
-      <h2 id="wechatTitle">使用微信聯絡我</h2>
+      <h2 id="wechatTitle">加我微信</h2>
       <p>請使用微信掃描 QR Code 加我。</p>
       <img src="wechat-qr.png" alt="William Chen WeChat QR Code" class="wechat-qr">
       <p class="wechat-id"><strong>WeChat ID:</strong> wilma626</p>
@@ -470,13 +470,21 @@
       const m = now.getMonth() + 1;
       const d = now.getDate();
 
-      if (y === 2026 && m === 8 && d === 1) {
-        bar.innerHTML = '<i class="fa-solid fa-house-chimney"></i> Today\'s Open House • Fontana • 1–4 PM';
-      } else if (y === 2026 && m === 8 && d === 2) {
-        bar.innerHTML = '<i class="fa-solid fa-house-chimney"></i> Today\'s Open House • San Bernardino • 12–4 PM';
+      if (y === 2026 && m === 9 && (d === 19 || d === 20)) {
+        bar.innerHTML = '<i class="fa-solid fa-house-chimney"></i> 今日開放看屋 • Diamond Bar • 11 AM–4 PM';
+        bar.href = "open-house.pdf";
+        bar.target = "_blank";
+        bar.rel = "noopener noreferrer";
+      } else if (y === 2026 && m === 9 && d < 19) {
+        bar.innerHTML = '<i class="fa-solid fa-house-chimney"></i> 本週末開放看屋 • Diamond Bar • 周六 & 周日 11 AM–4 PM';
+        bar.href = "open-house.pdf";
+        bar.target = "_blank";
+        bar.rel = "noopener noreferrer";
       } else {
-        bar.innerHTML = '<i class="fa-solid fa-house-chimney"></i> View 開放看屋檔案';
+        bar.innerHTML = '<i class="fa-solid fa-house-chimney"></i> 開放看屋檔案';
         bar.href = "open-house.html#archive";
+        bar.removeAttribute("target");
+        bar.removeAttribute("rel");
       }
     }
 
