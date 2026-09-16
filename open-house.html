@@ -262,29 +262,29 @@
     <section class="featured-section" id="featuredSection">
       <h2 class="section-title" id="featuredHeading">Upcoming Open House</h2>
 
-      <article class="event-card" id="cameronEvent" data-start-date="2026-09-05" data-end-date="2026-09-06">
-        <span class="status" id="cameronStatus">UPCOMING OPEN HOUSE</span>
-        <div class="event-date">Saturday-Sunday, September 5-6, 2026</div>
-        <h2>820 E Cameron Avenue, West Covina</h2>
-        <div class="event-time">12:00 PM-4:00 PM Both Days</div>
+      <article class="event-card" id="decorahEvent" data-start-date="2026-09-19" data-end-date="2026-09-20">
+        <span class="status" id="decorahStatus">UPCOMING OPEN HOUSE</span>
+        <div class="event-date">Saturday–Sunday, September 19–20, 2026</div>
+        <h2>23966 Decorah, Diamond Bar</h2>
+        <div class="event-time">11:00 AM–4:00 PM Both Days</div>
 
         <div class="schedule">
           <div class="schedule-item">
-            <strong>Saturday, September 5</strong>
-            12:00 PM-4:00 PM
+            <strong>Saturday, September 19</strong>
+            11:00 AM–4:00 PM
           </div>
           <div class="schedule-item">
-            <strong>Sunday, September 6</strong>
-            12:00 PM-4:00 PM
+            <strong>Sunday, September 20</strong>
+            11:00 AM–4:00 PM
           </div>
         </div>
 
         <p class="property-details">
-          Offered at $1,488,000 • 6 bedrooms • 3 bathrooms total • approximately 2,571 sq. ft. Beautifully renovated West Covina property featuring a 4-bedroom, 2-bath main residence plus a newly constructed detached 2-bedroom, 1-bath ADU completed in 2026. Highlights include an updated kitchen with center island and high-end appliances, renovated bathrooms, new flooring and paint, central A/C, and a 735 sq. ft. ADU with its own kitchen and washer/dryer hookup.
+          Offered at $979,999 • 5 bedrooms • 3 bathrooms • approximately 2,204 sq. ft. Diamond Bar home with a spacious layout and convenient access to nearby shopping, dining, schools, and major routes.
         </p>
 
         <div class="buttons">
-          <a class="button primary" href="2026-0905-820-e-cameron-avenue-west-covina.pdf" target="_blank" rel="noopener noreferrer">
+          <a class="button primary" href="2026-0919-23966-Decorah-Diamond Bar.pdf" target="_blank" rel="noopener noreferrer">
             View Flyer
           </a>
           <a class="button" href="sms:6267757258">
@@ -304,10 +304,18 @@
       </p>
 
       <div class="archive-list" id="archiveList">
-        <div class="archive-item" id="cameronArchiveItem">
+        <div class="archive-item" id="decorahArchiveItem">
+          <div>
+            <strong>23966 Decorah, Diamond Bar</strong>
+            <span>September 19–20, 2026 • 11:00 AM–4:00 PM both days</span>
+          </div>
+          <a class="button" href="2026-0919-23966-Decorah-Diamond Bar.pdf" target="_blank" rel="noopener noreferrer">View Flyer</a>
+        </div>
+
+        <div class="archive-item">
           <div>
             <strong>820 E Cameron Avenue, West Covina</strong>
-            <span>September 5-6, 2026 • 12:00 PM-4:00 PM both days</span>
+            <span>September 5–6, 2026 • 12:00 PM–4:00 PM both days</span>
           </div>
           <a class="button" href="2026-0905-820-e-cameron-avenue-west-covina.pdf" target="_blank" rel="noopener noreferrer">View Flyer</a>
         </div>
@@ -379,14 +387,14 @@
 
     function updateOpenHousePage() {
       const today = localDateKey(new Date());
-      const startDate = "2026-09-05";
-      const endDate = "2026-09-06";
+      const startDate = "2026-09-19";
+      const endDate = "2026-09-20";
 
-      const eventCard = document.getElementById("cameronEvent");
-      const status = document.getElementById("cameronStatus");
+      const eventCard = document.getElementById("decorahEvent");
+      const status = document.getElementById("decorahStatus");
       const heading = document.getElementById("featuredHeading");
       const featuredSection = document.getElementById("featuredSection");
-      const archiveItem = document.getElementById("cameronArchiveItem");
+      const archiveItem = document.getElementById("decorahArchiveItem");
 
       if (today < startDate) {
         heading.textContent = "Upcoming Open House";
