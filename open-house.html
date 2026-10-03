@@ -261,38 +261,25 @@
 
     <section class="featured-section" id="featuredSection">
       <h2 class="section-title" id="featuredHeading">Upcoming Open House</h2>
-
-      <article class="event-card" id="decorahEvent" data-start-date="2026-09-19" data-end-date="2026-09-20">
-        <span class="status" id="decorahStatus">UPCOMING OPEN HOUSE</span>
-        <div class="event-date">Saturday–Sunday, September 19–20, 2026</div>
-        <h2>23966 Decorah, Diamond Bar</h2>
-        <div class="event-time">11:00 AM–4:00 PM Both Days</div>
-
-        <div class="schedule">
-          <div class="schedule-item">
-            <strong>Saturday, September 19</strong>
-            11:00 AM–4:00 PM
-          </div>
-          <div class="schedule-item">
-            <strong>Sunday, September 20</strong>
-            11:00 AM–4:00 PM
-          </div>
+      <article class="event-card" id="royalViewEvent">
+        <span class="status" id="royalViewStatus">UPCOMING OPEN HOUSE</span>
+        <div class="event-date" id="royalViewDate">Saturday–Sunday, October 3–4, 2026</div>
+        <h2>16907 Royal View Road, Hacienda Heights</h2>
+        <div class="event-time" id="royalViewTime">11:00 AM–4:00 PM Both Days</div>
+        <div class="schedule" id="royalViewSchedule">
+          <div class="schedule-item"><strong>Saturday, October 3</strong>11:00 AM–4:00 PM</div>
+          <div class="schedule-item"><strong>Sunday, October 4</strong>11:00 AM–4:00 PM</div>
         </div>
-
         <p class="property-details">
-          Offered at $979,999 • 5 bedrooms • 3 bathrooms • approximately 2,204 sq. ft. Diamond Bar home with a spacious layout and convenient access to nearby shopping, dining, schools, and major routes.
+          Offered at $1,260,000 • 4 bedrooms • 3 bathrooms • approximately 2,212 sq. ft.
+          Two-story Hacienda Heights home with beautiful mountain views, a family room with fireplace,
+          central heating and air conditioning, an attached 3-car garage, additional driveway parking,
+          an approximately 8,343 sq. ft. lot, and no HOA.
         </p>
-
         <div class="buttons">
-          <a class="button primary" href="2026-0919-23966-Decorah-Diamond Bar.pdf" target="_blank" rel="noopener noreferrer">
-            View Flyer
-          </a>
-          <a class="button" href="sms:6267757258">
-            Ask William
-          </a>
-          <a class="button" href="https://williamchen.stigler.mortgage/" target="_blank" rel="noopener noreferrer">
-            Search Homes
-          </a>
+          <a class="button primary" href="2026-1003-16907-Royal-View-Road-Hacienda-Hts.pdf" target="_blank" rel="noopener noreferrer">View Flyer</a>
+          <a class="button" href="sms:6267757258">Ask William</a>
+          <a class="button" href="https://williamchen.stigler.mortgage/" target="_blank" rel="noopener noreferrer">Search Homes</a>
         </div>
       </article>
     </section>
@@ -387,30 +374,30 @@
 
     function updateOpenHousePage() {
       const today = localDateKey(new Date());
-      const startDate = "2026-09-19";
-      const endDate = "2026-09-20";
-
-      const eventCard = document.getElementById("decorahEvent");
-      const status = document.getElementById("decorahStatus");
+      const startDate = "2026-10-03";
+      const endDate = "2026-10-04";
+      const card = document.getElementById("royalViewEvent");
+      const status = document.getElementById("royalViewStatus");
       const heading = document.getElementById("featuredHeading");
-      const featuredSection = document.getElementById("featuredSection");
-      const archiveItem = document.getElementById("decorahArchiveItem");
+      const dateLine = document.getElementById("royalViewDate");
+      const timeLine = document.getElementById("royalViewTime");
+      const schedule = document.getElementById("royalViewSchedule");
 
       if (today < startDate) {
         heading.textContent = "Upcoming Open House";
         status.textContent = "UPCOMING OPEN HOUSE";
-        archiveItem.classList.add("hidden");
       } else if (today >= startDate && today <= endDate) {
         heading.textContent = "Today's Open House";
         status.textContent = "OPEN TODAY";
-        eventCard.classList.add("today");
-        archiveItem.classList.add("hidden");
+        card.classList.add("today");
       } else {
-        featuredSection.classList.add("hidden");
-        archiveItem.classList.remove("hidden");
+        heading.textContent = "Featured Listing";
+        status.textContent = "NEXT OPEN HOUSE COMING SOON";
+        dateLine.textContent = "16907 Royal View Road • Hacienda Heights";
+        timeLine.textContent = "Next open house dates will be posted here.";
+        schedule.classList.add("hidden");
       }
     }
-
     updateOpenHousePage();
   </script>
 </body>
