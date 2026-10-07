@@ -231,6 +231,11 @@
       font-weight: 700;
     }
 
+    .royal-history { margin-top: 26px; padding-top: 20px; border-top: 1px solid #ddd; }
+    .royal-history h3 { font-size: 16px; margin-bottom: 6px; }
+    .history-note { color: #666; font-size: 13px; margin-bottom: 12px; }
+    .history-row { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #eee; font-size: 13px; }
+    .history-row span:last-child { color: #666; white-space: nowrap; }
     .hidden {
       display: none;
     }
@@ -280,6 +285,12 @@
           <a class="button primary" href="2026-1003-16907-Royal-View-Road-Hacienda-Hts.pdf" target="_blank" rel="noopener noreferrer">View Flyer</a>
           <a class="button" href="sms:6267757258">Ask William</a>
           <a class="button" href="https://williamchen.stigler.mortgage/" target="_blank" rel="noopener noreferrer">Search Homes</a>
+        </div>
+        <div class="royal-history" id="royalHistory">
+          <h3>Royal View Open House History</h3>
+          <p class="history-note">Previous and scheduled open houses at this listing.</p>
+          <div class="history-row"><span>October 10–11, 2026 · 11 AM–4 PM</span><span id="historyOct10">Upcoming</span></div>
+          <div class="history-row"><span>October 3–4, 2026 · 11 AM–4 PM</span><span>Past event</span></div>
         </div>
       </article>
     </section>
@@ -382,6 +393,8 @@
       const dateLine = document.getElementById("royalViewDate");
       const timeLine = document.getElementById("royalViewTime");
       const schedule = document.getElementById("royalViewSchedule");
+      const historyStatus = document.getElementById("historyOct10");
+      historyStatus.textContent = today < startDate ? "Upcoming" : today <= endDate ? "This weekend" : "Past event";
 
       if (today < startDate) {
         heading.textContent = "Upcoming Open House";
