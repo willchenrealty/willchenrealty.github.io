@@ -268,12 +268,12 @@
       <h2 class="section-title" id="featuredHeading">Upcoming Open House</h2>
       <article class="event-card" id="royalViewEvent">
         <span class="status" id="royalViewStatus">UPCOMING OPEN HOUSE</span>
-        <div class="event-date" id="royalViewDate">Saturday–Sunday, October 10–11, 2026</div>
+        <div class="event-date" id="royalViewDate">Saturday–Sunday, October 17–18, 2026</div>
         <h2>16907 Royal View Road, Hacienda Heights</h2>
         <div class="event-time" id="royalViewTime">11:00 AM–4:00 PM Both Days</div>
         <div class="schedule" id="royalViewSchedule">
-          <div class="schedule-item"><strong>Saturday, October 10</strong>11:00 AM–4:00 PM</div>
-          <div class="schedule-item"><strong>Sunday, October 11</strong>11:00 AM–4:00 PM</div>
+          <div class="schedule-item"><strong>Saturday, October 17</strong>11:00 AM–4:00 PM</div>
+          <div class="schedule-item"><strong>Sunday, October 18</strong>11:00 AM–4:00 PM</div>
         </div>
         <p class="property-details">
           Offered at $1,260,000 • 4 bedrooms • 3 bathrooms • approximately 2,212 sq. ft.
@@ -289,7 +289,8 @@
         <div class="royal-history" id="royalHistory">
           <h3>Royal View Open House History</h3>
           <p class="history-note">Previous and scheduled open houses at this listing.</p>
-          <div class="history-row"><span>October 10–11, 2026 · 11 AM–4 PM</span><span id="historyOct10">Upcoming</span></div>
+          <div class="history-row"><span>October 17–18, 2026 · 11 AM–4 PM</span><span id="historyOct17">Upcoming</span></div>
+          <div class="history-row"><span>October 10–11, 2026 · 11 AM–4 PM</span><span>Past event</span></div>
           <div class="history-row"><span>October 3–4, 2026 · 11 AM–4 PM</span><span>Past event</span></div>
         </div>
       </article>
@@ -385,15 +386,15 @@
 
     function updateOpenHousePage() {
       const today = localDateKey(new Date());
-      const startDate = "2026-10-10";
-      const endDate = "2026-10-11";
+      const startDate = "2026-10-17";
+      const endDate = "2026-10-18";
       const card = document.getElementById("royalViewEvent");
       const status = document.getElementById("royalViewStatus");
       const heading = document.getElementById("featuredHeading");
       const dateLine = document.getElementById("royalViewDate");
       const timeLine = document.getElementById("royalViewTime");
       const schedule = document.getElementById("royalViewSchedule");
-      const historyStatus = document.getElementById("historyOct10");
+      const historyStatus = document.getElementById("historyOct17");
       historyStatus.textContent = today < startDate ? "Upcoming" : today <= endDate ? "This weekend" : "Past event";
 
       if (today < startDate) {
