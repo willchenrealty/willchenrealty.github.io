@@ -333,8 +333,8 @@
 </head>
 
 <body>
-  <a class="open-house-bar" id="openHouseBar" href="2026-0919-23966-Decorah-Diamond Bar.pdf" target="_blank" rel="noopener noreferrer">
-    <i class="fa-solid fa-house-chimney"></i> 本周末开放看房 • Diamond Bar • 周六 & 周日 11 AM–4 PM
+  <a class="open-house-bar" id="openHouseBar" href="open-house.html">
+    <i class="fa-solid fa-house-chimney"></i> 本周末开放看房
   </a>
 
   <main class="card">
@@ -355,7 +355,7 @@
     </a>
 
     <div class="open-house-links">
-      <a href="2026-0919-23966-Decorah-Diamond Bar.pdf" target="_blank" rel="noopener noreferrer">查看本周末开放看房传单</a>
+      <a href="open-house.html">本周末开放看房</a>
       <a href="open-house.html#archive">开放看房档案</a>
     </div>
 
@@ -461,34 +461,6 @@
         closeWeChatModal();
       }
     });
-    function updateOpenHouseBar() {
-      const bar = document.getElementById("openHouseBar");
-      if (!bar) return;
-
-      const now = new Date();
-      const y = now.getFullYear();
-      const m = now.getMonth() + 1;
-      const d = now.getDate();
-
-      if (y === 2026 && m === 9 && (d === 19 || d === 20)) {
-        bar.innerHTML = '<i class="fa-solid fa-house-chimney"></i> 今日开放看房 • Diamond Bar • 11 AM–4 PM';
-        bar.href = "2026-0919-23966-Decorah-Diamond Bar.pdf";
-        bar.target = "_blank";
-        bar.rel = "noopener noreferrer";
-      } else if (y === 2026 && m === 9 && d < 19) {
-        bar.innerHTML = '<i class="fa-solid fa-house-chimney"></i> 本周末开放看房 • Diamond Bar • 周六 & 周日 11 AM–4 PM';
-        bar.href = "2026-0919-23966-Decorah-Diamond Bar.pdf";
-        bar.target = "_blank";
-        bar.rel = "noopener noreferrer";
-      } else {
-        bar.innerHTML = '<i class="fa-solid fa-house-chimney"></i> 开放看房档案';
-        bar.href = "open-house.html#archive";
-        bar.removeAttribute("target");
-        bar.removeAttribute("rel");
-      }
-    }
-
-    updateOpenHouseBar();
   </script>
 </body>
 </html>
