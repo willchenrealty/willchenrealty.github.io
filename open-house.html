@@ -266,33 +266,27 @@
 
     <section class="featured-section" id="featuredSection">
       <h2 class="section-title" id="featuredHeading">Upcoming Open House</h2>
-      <article class="event-card" id="royalViewEvent">
-        <span class="status" id="royalViewStatus">UPCOMING OPEN HOUSE</span>
-        <div class="event-date" id="royalViewDate">Saturday–Sunday, October 31–November 1, 2026</div>
-        <h2>16907 Royal View Road, Hacienda Heights</h2>
-        <div class="event-time" id="royalViewTime">11:00 AM–4:00 PM Both Days</div>
-        <div class="schedule" id="royalViewSchedule">
-          <div class="schedule-item"><strong>Saturday, October 31</strong>11:00 AM–4:00 PM</div>
-          <div class="schedule-item"><strong>Sunday, November 1</strong>11:00 AM–4:00 PM</div>
+      <article class="event-card" id="featuredEvent">
+        <span class="status" id="featuredStatus">UPCOMING OPEN HOUSE</span>
+        <div class="event-date" id="featuredDate">Saturday–Sunday, November 7–8, 2026</div>
+        <h2>11799 Rockingham Court, Rancho Cucamonga, CA 91730</h2>
+        <div class="event-time" id="featuredTime">11:00 AM–4:00 PM Both Days</div>
+        <div class="schedule" id="featuredSchedule">
+          <div class="schedule-item"><strong>Saturday, November 7</strong>11:00 AM–4:00 PM</div>
+          <div class="schedule-item"><strong>Sunday, November 8</strong>11:00 AM–4:00 PM</div>
         </div>
         <p class="property-details">
-          Offered at $1,260,000 • 4 bedrooms • 3 bathrooms • approximately 2,212 sq. ft.
-          Two-story Hacienda Heights home with beautiful mountain views, a family room with fireplace,
-          central heating and air conditioning, an attached 3-car garage, additional driveway parking,
-          an approximately 8,343 sq. ft. lot, and no HOA.
+          Offered at $875,000 • 4 bedrooms • 2.5 bathrooms • approximately 1,969 sq. ft.
+          Beautifully updated two-story home on a peaceful cul-de-sac in Rancho Cucamonga's Terra Vista community.
+          Features an updated kitchen with new countertops, tile backsplash and stainless-steel appliances,
+          fresh paint and flooring, upgraded bathrooms, central heating and air conditioning,
+          downstairs laundry, an attached two-car garage, refreshed landscaping, and no HOA fees.
+          Conveniently located near Victoria Gardens, Ontario Mills and Ontario International Airport.
         </p>
         <div class="buttons">
-          <a class="button primary" href="2026-1003-16907-Royal-View-Road-Hacienda-Hts.pdf" target="_blank" rel="noopener noreferrer">View Flyer</a>
+          <a class="button primary" href="2026-1107-11799-Rockingham-Ct-Rancho-Cucamonga.pdf" target="_blank" rel="noopener noreferrer">View Flyer</a>
           <a class="button" href="sms:6267757258">Ask William</a>
           <a class="button" href="https://williamchen.stigler.mortgage/" target="_blank" rel="noopener noreferrer">Search Homes</a>
-        </div>
-        <div class="royal-history" id="royalHistory">
-          <h3>Royal View Open House History</h3>
-          <p class="history-note">Previous and scheduled open houses at this listing.</p>
-          <div class="history-row"><span>October 31–November 1, 2026 · 11 AM–4 PM</span><span id="historyOct31">Upcoming</span></div>
-          <div class="history-row"><span>October 24–25, 2026 · 11 AM–4 PM</span><span>Past event</span></div>
-          <div class="history-row"><span>October 10–11, 2026 · 11 AM–4 PM</span><span>Past event</span></div>
-          <div class="history-row"><span>October 3–4, 2026 · 11 AM–4 PM</span><span>Past event</span></div>
         </div>
       </article>
     </section>
@@ -304,6 +298,15 @@
       </p>
 
       <div class="archive-list" id="archiveList">
+        <div class="archive-item">
+          <div>
+            <strong>16907 Royal View Road, Hacienda Heights</strong>
+            <span>Previous open houses: October 3–4, 10–11, 24–25, and October 31–November 1, 2026 • 11:00 AM–4:00 PM both days</span>
+          </div>
+          <a class="button" href="2026-1003-16907-Royal-View-Road-Hacienda-Hts.pdf" target="_blank" rel="noopener noreferrer">View Flyer</a>
+        </div>
+
+        
         <div class="archive-item" id="decorahArchiveItem">
           <div>
             <strong>23966 Decorah, Diamond Bar</strong>
@@ -379,38 +382,28 @@
   </main>
 
   <script>
-    function localDateKey(date) {
-      return date.getFullYear() + "-" +
-        String(date.getMonth() + 1).padStart(2, "0") + "-" +
-        String(date.getDate()).padStart(2, "0");
-    }
-
     function updateOpenHousePage() {
-      const today = localDateKey(new Date());
-      const startDate = "2026-10-31";
-      const endDate = "2026-11-01";
-      const card = document.getElementById("royalViewEvent");
-      const status = document.getElementById("royalViewStatus");
-      const heading = document.getElementById("featuredHeading");
-      const dateLine = document.getElementById("royalViewDate");
-      const timeLine = document.getElementById("royalViewTime");
-      const schedule = document.getElementById("royalViewSchedule");
-      const historyStatus = document.getElementById("historyOct31");
-      historyStatus.textContent = today < startDate ? "Upcoming" : today <= endDate ? "This weekend" : "Past event";
-
-      if (today < startDate) {
-        heading.textContent = "Upcoming Open House";
-        status.textContent = "UPCOMING OPEN HOUSE";
-      } else if (today >= startDate && today <= endDate) {
-        heading.textContent = "Today's Open House";
-        status.textContent = "OPEN TODAY";
-        card.classList.add("today");
+      const now = new Date();
+      const dateKey = new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'America/Los_Angeles', year: 'numeric', month: '2-digit', day: '2-digit'
+      }).format(now);
+      const startDate = '2026-11-07';
+      const endDate = '2026-11-08';
+      const card = document.getElementById('featuredEvent');
+      const status = document.getElementById('featuredStatus');
+      const heading = document.getElementById('featuredHeading');
+      if (dateKey < startDate) {
+        heading.textContent = 'Upcoming Open House';
+        status.textContent = 'UPCOMING OPEN HOUSE';
+      } else if (dateKey <= endDate) {
+        heading.textContent = 'Open House This Weekend';
+        status.textContent = 'OPEN HOUSE THIS WEEKEND';
+        card.classList.add('today');
       } else {
-        heading.textContent = "Featured Listing";
-        status.textContent = "NEXT OPEN HOUSE COMING SOON";
-        dateLine.textContent = "16907 Royal View Road • Hacienda Heights";
-        timeLine.textContent = "Next open house dates will be posted here.";
-        schedule.classList.add("hidden");
+        heading.textContent = 'Recent Open House';
+        status.textContent = 'OPEN HOUSE COMPLETED';
+        document.getElementById('featuredTime').textContent = 'November 7–8 open house has ended. Contact William for a showing.';
+        document.getElementById('featuredSchedule').classList.add('hidden');
       }
     }
     updateOpenHousePage();
