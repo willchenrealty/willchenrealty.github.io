@@ -268,12 +268,12 @@
       <h2 class="section-title" id="featuredHeading">Upcoming Open House</h2>
       <article class="event-card" id="featuredEvent">
         <span class="status" id="featuredStatus">UPCOMING OPEN HOUSE</span>
-        <div class="event-date" id="featuredDate">Saturday–Sunday, November 21–22, 2026</div>
+        <div class="event-date" id="featuredDate">Saturday–Sunday, November 28–29, 2026</div>
         <h2>16907 Royal View Road, Hacienda Heights, CA 91745</h2>
         <div class="event-time" id="featuredTime">11:00 AM–4:00 PM Both Days</div>
         <div class="schedule" id="featuredSchedule">
-          <div class="schedule-item"><strong>Saturday, November 21</strong>11:00 AM–4:00 PM</div>
-          <div class="schedule-item"><strong>Sunday, November 22</strong>11:00 AM–4:00 PM</div>
+          <div class="schedule-item"><strong>Saturday, November 28</strong>11:00 AM–4:00 PM</div>
+          <div class="schedule-item"><strong>Sunday, November 29</strong>11:00 AM–4:00 PM</div>
         </div>
         <p class="property-details">
           Offered at $1,260,000 • 4 bedrooms • 3 bathrooms • approximately 2,212 sq. ft.
@@ -288,6 +288,7 @@
         <div class="royal-history">
           <h3>Royal View Open House History</h3>
           <p class="history-note">Previous weekends hosted at this property</p>
+          <div class="history-row"><span>November 21–22, 2026 · 11 AM–4 PM</span><span>Past event</span></div>
           <div class="history-row"><span>November 14–15, 2026 · 11 AM–4 PM</span><span>Past event</span></div>
           <div class="history-row"><span>October 31–November 1, 2026 · 11 AM–4 PM</span><span>Past event</span></div>
           <div class="history-row"><span>October 24–25, 2026 · 11 AM–4 PM</span><span>Past event</span></div>
@@ -392,8 +393,8 @@
       const dateKey = new Intl.DateTimeFormat('en-CA', {
         timeZone: 'America/Los_Angeles', year: 'numeric', month: '2-digit', day: '2-digit'
       }).format(now);
-      const startDate = '2026-11-21';
-      const endDate = '2026-11-22';
+      const startDate = '2026-11-28';
+      const endDate = '2026-11-29';
       const card = document.getElementById('featuredEvent');
       const status = document.getElementById('featuredStatus');
       const heading = document.getElementById('featuredHeading');
@@ -409,7 +410,7 @@
         status.textContent = 'NEXT OPEN HOUSE COMING SOON';
         document.getElementById('featuredTime').textContent = 'Next open house dates will be posted here. Contact William for a showing.';
         document.getElementById('featuredDate').textContent = '16907 Royal View Road · Hacienda Heights';
-        document.querySelector('.royal-history').insertAdjacentHTML('afterbegin', '<div class="history-row"><span>November 21–22, 2026 · 11 AM–4 PM</span><span>Past event</span></div>');
+        document.querySelector('.history-note').insertAdjacentHTML('afterend', '<div class="history-row"><span>November 28–29, 2026 · 11 AM–4 PM</span><span>Past event</span></div>');
         document.getElementById('featuredSchedule').classList.add('hidden');
       }
     }
